@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@700&display=swap');
+:root{
+    --color-orange: #FF9900;
+    --color-gray: #575757;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 90vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 54px;
+}
+header h1{
+    font-family: 'Galada', cursive;
+    font-size: 45px;
+    padding-right: 70px;
+}
+#burger{
+    width: 500px;
+    animation: zoom-burger 1.5s;
+}
+span{
+    color: var(--color-orange);
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 210px;
+}
+nav ul a{
+    text-decoration: none;
+    color: var(--color-gray);
+    font-family: 'Galada', cursive;
+    font-size: 31px;
+    transition: 0.5s;
+    animation: menu-cores 1.5s;
+}
+nav ul a:hover{
+    color: var(--color-orange);
+    transition: 0.5s;
+}
+#menu-burger{
+    visibility: hidden;
+    margin-top: 25px;
+}
+
+main{
+    display: flex;
+    width: 90vw;
+    margin: auto;
+}
+.promotion{
+    margin-top: 150px;
+}
+.promotion h1{
+    font-family: 'Galada', cursive;
+    font-size: 90px;
+    animation: burger-top 1.5s;
+}
+.promotion p{
+    font-family: Inter;
+    font-size: 25px;
+    margin-bottom: 45px;
+}
+.price p{
+    font-family: 'Gelasio', serif;
+    font-size: 56px;
+    color: var(--color-orange);
+}
+#second{
+    font-size: 36px;
+    color: var(--color-gray);
+}
+.price{
+    display: flex;
+    gap: 38px;
+    align-items: center;
+}
+button{
+    padding: 22px 46px;
+    border-radius: 20px;
+    font-size: 31px;
+    font-family: Inter;
+    color: white;
+    background-color: #EA0000;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 3px solid #EA0000;
+    animation: button-left 1.5s;
+}
+button:hover{
+    background-color: white;
+    color: #EA0000;
+    border: 3px solid #EA0000;
+    transition: 0.2s;
+}
+@keyframes button-left {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes burger-top {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes zoom-burger {
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes menu-cores {
+    from{
+        color: var(--color-orange);
+    }
+    to{
+        color: var(--color-gray);
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    nav{
+        visibility: collapse;
+    }
+    #menu-burger{
+        visibility: visible;
+    }
+}
