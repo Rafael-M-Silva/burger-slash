@@ -21,10 +21,6 @@ header h1{
     font-size: 45px;
     padding-right: 70px;
 }
-#burger{
-    width: 500px;
-    animation: zoom-burger 1.5s;
-}
 span{
     color: var(--color-orange);
 }
@@ -135,6 +131,18 @@ button:hover{
     }
     to{
         color: var(--color-gray);
+    }
+}
+#burger{
+    width: 500px;
+    animation: loop-infinit-translate 2s infinite alternate;
+}
+@keyframes loop-infinit-translate {
+    from{
+        transform: rotateZ(4deg);
+    }
+    to{
+        transform: rotateZ(0deg);
     }
 }
 
