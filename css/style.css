@@ -52,6 +52,7 @@ main{
 }
 .promotion{
     margin-top: 150px;
+    height: 100%;
 }
 .promotion h1{
     font-family: 'Galada', cursive;
@@ -135,6 +136,9 @@ button:hover{
     }
 }
 @media screen and (max-width: 1060px) {
+    main{
+        margin-top: 50px;
+    }
     nav ul{
         gap: 100px;
     }
@@ -155,24 +159,36 @@ button:hover{
     }
 }
 @media screen and (max-width:800px) {
+    main{
+        flex-direction: column-reverse;
+    }
+    .promotion{
+        margin-top: 0;
+        height: 500px;
+    }
     .promotion h1{
         font-size: 60px;
+        text-align: center;
     }
     .promotion p{
         font-size: 16px;
     }
+    .price, #botao{
+        display: flex;
+        justify-content: center;
+    }
     .price p {
-        font-size: 40px;
+        font-size: 55px;
     }
     #second{
-        font-size: 25px;
+        font-size: 35px;
     }
     #burger{
-        width: 300px; 
+        width: 250px; 
+        margin: auto;
     }
     nav{
-        display: block;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         background-color: white;
     }
@@ -196,6 +212,7 @@ button:hover{
 @media screen and (max-width:690px) {
     main{
         flex-direction: column-reverse;
+        margin-top: 0;
     }
     #burger{
         width: 200px;
@@ -208,9 +225,73 @@ button:hover{
         padding: 10px 25.5px;
         border-radius: 12px;
         font-size: 21px;
+        box-shadow: rgba(255, 0, 0, 0.541) 0px 2px 10px;
     }
     .promotion{
-        margin-top: 40px;
+        margin-top: 20px;
+        height: 500px;
+    }
+    .promotion h1{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .price{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .price p{
+        font-size: 50px;
+    }
+    #second{
+        font-size: 30px;
+    }
+    #botao{
+        display: flex;
+        justify-content: center;
+    }
+    .promotion p {
+        margin-bottom: 30px;
+    }
+    nav ul li a {
+        font-size: 25px;
+    }
+    nav ul{
+        gap: 70px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #logo h1{
+        font-size: 35px;
+    }
+    #logo img{
+        width: 85%;
+    }
+    #logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header{
+        margin-top: 5px;
+    }
+    #burger{
+        width: 190px;
+        margin: auto;
+    }
+    .promotion h1{
+        font-size: 46px;
+    }
+    button{
+        padding: 10px 25.5px;
+        border-radius: 12px;
+        font-size: 21px;
+        box-shadow: rgba(255, 0, 0, 0.541) 0px 2px 10px;
+    }
+    .promotion{
+        margin-top: 30px;
+        height: 400px;
     }
     .promotion h1{
         text-align: center;
@@ -220,26 +301,20 @@ button:hover{
         justify-content: center;
         align-items: center;
     }
-    .price p {
-        margin-bottom: 14px;
+    .price p{
+        font-size: 45px;
     }
     #botao{
         display: flex;
         justify-content: center;
     }
-    nav{
-        width: 100vw;
-        position: fixed;
-        bottom: 0;
-        padding: 10px 0px;
-    }
     .promotion p {
-        margin-bottom: 17px;
+        margin-bottom: 15px;
     }
     nav ul li a {
         font-size: 25px;
     }
     nav ul{
-        gap: 70px;
+        gap: 65px;
     }
 }
