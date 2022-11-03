@@ -38,17 +38,12 @@ nav ul a{
     color: var(--color-gray);
     font-family: 'Galada', cursive;
     font-size: 31px;
-    transition: 0.5s;
-    animation: menu-cores 1.5s;
 }
 nav ul a:hover{
     color: var(--color-orange);
     transition: 0.5s;
 }
-#menu-burger{
-    visibility: hidden;
-    margin-top: 25px;
-}
+
 
 main{
     display: flex;
@@ -94,6 +89,7 @@ button{
     transition: 0.2s;
     border: 3px solid #EA0000;
     animation: button-left 1.5s;
+    box-shadow: rgba(255, 0, 0, 0.541) -1px 17px 23px;
 }
 button:hover{
     background-color: white;
@@ -125,14 +121,7 @@ button:hover{
         transform: scale(1);
     }
 }
-@keyframes menu-cores {
-    from{
-        color: var(--color-orange);
-    }
-    to{
-        color: var(--color-gray);
-    }
-}
+
 #burger{
     width: 500px;
     animation: loop-infinit-translate 2s infinite alternate;
@@ -145,12 +134,112 @@ button:hover{
         transform: rotateZ(0deg);
     }
 }
-
-@media screen and (max-width: 1130px) {
-    nav{
-        visibility: collapse;
+@media screen and (max-width: 1060px) {
+    nav ul{
+        gap: 100px;
     }
-    #menu-burger{
-        visibility: visible;
+    .promotion h1{
+        font-size: 70px;
+    }
+    .promotion p{
+        font-size: 18px;
+    }
+    .price p {
+        font-size: 50px;
+    }
+    #second{
+        font-size: 30px;
+    }
+    #burger{
+        width: 380px; 
+    }
+}
+@media screen and (max-width:800px) {
+    .promotion h1{
+        font-size: 60px;
+    }
+    .promotion p{
+        font-size: 16px;
+    }
+    .price p {
+        font-size: 40px;
+    }
+    #second{
+        font-size: 25px;
+    }
+    #burger{
+        width: 300px; 
+    }
+    nav{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+    }
+    nav ul{
+        justify-content: center;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        margin-top: 13px;
+    }
+    #logo h1{
+        padding: 0;
+    }
+    button{
+        padding: 15px 30px;
+        border-radius: 12px;
+        font-size: 21px;
+    }
+}
+@media screen and (max-width:690px) {
+    main{
+        flex-direction: column-reverse;
+    }
+    #burger{
+        width: 200px;
+        margin: auto;
+    }
+    .promotion h1{
+        font-size: 46px;
+    }
+    button{
+        padding: 10px 25.5px;
+        border-radius: 12px;
+        font-size: 21px;
+    }
+    .promotion{
+        margin-top: 40px;
+    }
+    .promotion h1{
+        text-align: center;
+    }
+    .price{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .price p {
+        margin-bottom: 14px;
+    }
+    #botao{
+        display: flex;
+        justify-content: center;
+    }
+    nav{
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        padding: 10px 0px;
+    }
+    .promotion p {
+        margin-bottom: 17px;
+    }
+    nav ul li a {
+        font-size: 25px;
+    }
+    nav ul{
+        gap: 70px;
     }
 }
