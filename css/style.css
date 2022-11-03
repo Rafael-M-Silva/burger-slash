@@ -193,6 +193,7 @@ button:hover{
         background-color: white;
     }
     nav ul{
+        width: 100vw;
         justify-content: center;
     }
     header{
